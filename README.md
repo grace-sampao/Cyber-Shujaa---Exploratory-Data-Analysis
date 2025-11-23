@@ -20,7 +20,7 @@ for the **Data and AI Specialist** track.
 ### The assignment 🎯
 
 The purpose of this assignment was to develop hands-on experience on Exploratory 
-Data Analysis using a Kaggle dataset and publishing our work on [Kaggle]().
+Data Analysis using a Kaggle dataset and publishing our work on [Kaggle](https://www.kaggle.com/).
 
 We were to practice the Exploratory Data Analysis steps:
 
@@ -80,16 +80,15 @@ your selected method of handling outliers for each feature, e.g.
 6. **Target Variable Exploration:** Analyze the Target/Dependent Variable Survived 
 and explore:
 
-    - The distribution of the target variable (Survived) using countplots and bar 
-    plots.
+    - The distribution of the target variable (Survived) using countplots and bar plots.
     - How balanced or imbalanced the dataset is.
-    - What factors (like age, gender, class, or embarkation point) may influence 
-    survival?
+    - What factors (like age, gender, class, or embarkation point) may influence survival?
     - Use combined plots to detect interaction effects.
 
 ### Links 🔗
 
-- [Kaggle dataset]()
+- [Titanic dataset](https://raw.githubusercontent.com/pandas-dev/pandas/main/doc/data/titanic.csv)
+- Initial [Kaggle submission](https://www.kaggle.com/code/gracesampao/grace-sampao-exploratory-data-analysis-assignment)
 
 ## 🛠️ My process
 
