@@ -96,6 +96,17 @@ and explore:
 
 ### What I learned 🧠
 
+**1. Accessing a group of rows and columns using `DataFrame.loc`.**
+
+I wanted to access and view the empty values in different columns as a `DataFrame` to asses their relevance.
+
+[`DataFrame.loc()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html#pandas.DataFrame.loc) enabled me to do this:
+
+```python
+titanic_dataset.loc[titanic_dataset['Embarked'].isna() == True]
+
+```
+
 ### Continued development 🌱
 
 ### Useful resources 📚
