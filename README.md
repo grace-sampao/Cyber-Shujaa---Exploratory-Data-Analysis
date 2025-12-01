@@ -121,7 +121,9 @@ titanic_dataset['Survived'] = titanic_dataset['Survived'].replace({
 
 ## 👩🏽‍💻 Author
 
-- LinkedIn - [Grace Sampao](https://www.linkedin.com/in/grace-sampao)
-- GitHub - [@nadupoy](https://github.com/nadupoy)
-- X - [@grace_sampao](https://x.com/grace_sampao)
-- [Blog](https://nadupoy.github.io/)
+| Platform | Link |
+| :--- | :--- |
+| **Portfolio Website** | [https://grace-sampao.github.io](https://grace-sampao.github.io) |
+| **LinkedIn** | [Grace Sampao](https://www.linkedin.com/in/grace-sampao) |
+| **X** | [@grace_sampao](https://x.com/grace_sampao) |
+| **Email** | sampaograce@gmail.com |
