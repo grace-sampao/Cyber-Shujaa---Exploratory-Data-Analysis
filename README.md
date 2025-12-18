@@ -126,6 +126,30 @@ titanic_dataset['Cabin'].fillna(
 )
 ```
 
+**4. Changing the order of columns using [`DataFrame.reindex()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.reindex.html).**
+
+This was applicable for feature engineering a new column that would place age in to a particular age group.
+
+```python
+column_labels = [
+  'PassengerId',
+  'Survived',
+  'Pclass',
+  'Name',
+  'Sex',
+  'Age',
+  'Age Group',
+  'SibSp',
+  'Parch',
+  'Ticket',
+  'Fare',
+  'Cabin',
+  'Embarked'
+]
+
+titanic_dataset_age_groups = titanic_dataset_age_groups.reindex(columns=column_labels)
+```
+
 ### Continued development 🌱
 
 ### Useful resources 📚
