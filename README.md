@@ -115,6 +115,17 @@ titanic_dataset['Survived'] = titanic_dataset['Survived'].replace({
 
 ```
 
+**3. Filling NA/NaN values using [`Series.fillna()`](https://pandas.pydata.org/docs/reference/api/pandas.Series.fillna.html).**
+
+Filled `NaN` values in the `['Cabin']` column to communicate cabin distribution more effectively.
+
+```python
+titanic_dataset['Cabin'].fillna(
+  value="Unassigned",
+  inplace=True
+)
+```
+
 ### Continued development 🌱
 
 ### Useful resources 📚
