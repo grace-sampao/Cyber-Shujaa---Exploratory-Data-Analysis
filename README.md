@@ -178,6 +178,8 @@ titanic_dataset_age_groups['Age Group'] = pd.cut(
 
 ### Continued development 🌱
 
+- Data Structures and Algorithms.
+
 ### Useful resources 📚
 
 ## 👩🏽‍💻 Author
