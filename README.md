@@ -150,6 +150,32 @@ column_labels = [
 titanic_dataset_age_groups = titanic_dataset_age_groups.reindex(columns=column_labels)
 ```
 
+**5. Binning values into discrete intervals using [`pandas.cut()`](https://pandas.pydata.org/docs/reference/api/pandas.cut.html#pandas.cut).**
+
+Grouping the values in the `['Age']` column would contribute to a more clearer visualization of the age distribution among the passenger population.
+
+`pandas.cut()` is used to segment and sort data values into bins. It is also useful for going from a continuous variable to a categorical variable e.g. converting ages to groups of age ranges as was the case here.
+
+It supports binning into an equal number of bins, or a pre-specified array of bins.
+
+```python
+bins = [0, 12, 19, 34, 54, 64, 120]
+labels = [
+  'Child (0-12)',
+  'Teen (13-19)',
+  'Young Adult (20-34)',
+  'Middle-Aged (35-54)',
+  'Pre-Retiree (55-64)',
+  'Senior (65+)'
+]
+
+titanic_dataset_age_groups['Age Group'] = pd.cut(
+  titanic_dataset_age_groups['Age Group'],
+  bins=bins,
+  labels=labels
+)
+```
+
 ### Continued development 🌱
 
 ### Useful resources 📚
