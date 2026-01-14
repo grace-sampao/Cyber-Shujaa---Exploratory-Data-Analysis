@@ -1,26 +1,24 @@
-# 🕸️ Cyber Shujaa - Exploratory Data Analysis 🚀
+# 🎉 Cyber Shujaa - Exploratory Data Analysis
 
 This is my updated solution to the week 3 assignment in the Cyber Shujaa program 
 for the **Data and AI Specialist** track.
 
 ## 🧭 Table of contents
 
-- [🌟 Overview](#🌟-overview)
-  - [The assignment 🎯](#the-assignment-🎯)
-  - [Links 🔗](#links-🔗)
-- [🛠️ My process](#🛠️-my-process)
-  - [Built with 🧱](#built-with-🧱)
-  - [What I learned 🧠](#what-i-learned-🧠)
-  - [Continued development 🌱](#continued-development-🌱)
-  - [Useful resources 📚](#useful-resources-📚)
-- [👩🏽‍💻 Author](#👩🏽‍💻-author)
+- [🎯 Executive Summary](#-executive-summary)
+- [🛠️ Tech Stack & Tools](#️-tech-stack--tools)
+- [📂 Data Overview](#-data-overview)
+- [🚀 Project Workflow](#-project-workflow)
+  - [1. Exploratory Data Analysis (EDA)](#1-exploratory-data-analysis-eda)
+  - [2. Feature Engineering](#2-feature-engineering)
+- [📈 Insights & Conclusions](#-insights--conclusions)
+- [💻 How to Run This Project](#-how-to-run-this-project)
+- [👩🏽‍💻 Author](#-author)
 
-## 🌟 Overview
-
-### The assignment 🎯
+## 🎯 Executive Summary
 
 The purpose of this assignment was to develop hands-on experience on Exploratory 
-Data Analysis using a Kaggle dataset and publishing our work on [Kaggle](https://www.kaggle.com/).
+Data Analysis.
 
 We were to practice the Exploratory Data Analysis steps:
 
@@ -31,162 +29,54 @@ We were to practice the Exploratory Data Analysis steps:
 5. Multivariate Analysis
 6. Target Variable Analysis
 
-We were to personalize our Exploratory Data Analysis of the dataset, ensuring that we:
+* **Key Finding:** Cabin allocation decreased by passenger class. First class had 
+the highest number of cabin allocations and Third class had the lowest.
 
-1. **Profile and analyze the list of features:** via data types, missing values, 
-duplicates, errors, and plots we could explore per feature. Here are some essential 
-`Pandas` functions used for initial exploration:
+## 🛠️ Tech Stack & Tools
 
-    - `df.head()`: Displays the first few rows of the dataset to give you a quick 
-    preview.
-    - `df.shape`: Returns the number of rows and columns in the dataset.
-    - `df.info()`: Provides details about the columns, their data types, and the 
-    number of non-null (non-missing) values.
-    - `df.describe()`: Provides summary statistics (mean, median, min, max, etc.) 
-    for numerical columns.
-    - `df.columns`: Lists the names of all columns in the dataset.
-    - `df.nunique()`: Returns the number of unique values in each column.
-    - `df.duplicated()`: Checks for duplicate rows.
+* **Language:** Python
+* **Libraries:** Pandas, Numpy, Matplotlib, Math module
+* **Environment:** Jupyter Notebook / VS Code
 
-2. **Univariate Analysis:** Examine each feature at a time to understand its 
-distribution and seek to answer questions like:
+## 📂 Data Overview
 
-    - What is the age distribution of passengers?
-    - How many passengers embarked from each location?
-    - Are ticket prices evenly distributed, or are they skewed?
+* **Source:** [Pandas documentation](https://raw.githubusercontent.com/pandas-dev/pandas/main/doc/data/titanic.csv)
+* **Size:** 891 rows, 12 features
+* **Target Variable:** `Survived`
 
-3. **Bivariate Analysis:** Examine pairs of features of interest. Justify which 
-features you would like to pair in the analysis and seek to answer questions like:
+## 🚀 Project Workflow
 
-    - Does the Fare change depending on the Pclass?
-    - Are younger passengers more likely to survive on the Titanic?
-    - Does the Embarked location affect survival rate?
+### 1. Exploratory Data Analysis (EDA)
 
-4. **Multivariate analysis:** Explore more complex relationships between three or 
-more variables simultaneously. Detect interactions, combined effects, and hidden 
-patterns that may not be visible in bivariate analysis. This can help answer complex 
-questions, such as:
+* Handled missing values in the `Cabin`, `Age` and `Embarked` columns.
+* Converted the `Survived`, `Pclass`, `Sex` and `Emabarked` columns into categorical 
+data types.
+* **Key Visual:** ![Plot](./plots/Accompanied:Unaccompanied%20Survivors%20&%20Casualties%20per%20Age%20Group.png)
 
-    - How do Pclass, Age, and Fare jointly affect survival?
-    - Are survival rates different for Embarked locations when considering Pclass?
+### 2. Feature Engineering
 
-5. **Outlier detection and handling:** There are different ways to handle outliers, 
-which include removing, capping, imputing, or leaving them as is. Argue and justify 
-your selected method of handling outliers for each feature, e.g.
+* Engineered the `Age Group`, `Accompanied` and `Cabin Assignment` columns, bringing 
+the total number of features to 15.
 
-    - Removing outliers in Fare may help for predictive models, but could hide 
-    important insights for understanding passenger wealth.
+## 📈 Insights & Conclusions
 
-6. **Target Variable Exploration:** Analyze the Target/Dependent Variable Survived 
-and explore:
+1. *Insight 1:* The number of casualties was more than the survivors.
+2. *Insight 2:* Port S recorded the lowest fares paid while Port C recorded the 
+highest.
 
-    - The distribution of the target variable (Survived) using countplots and bar plots.
-    - How balanced or imbalanced the dataset is.
-    - What factors (like age, gender, class, or embarkation point) may influence survival?
-    - Use combined plots to detect interaction effects.
+## 💻 How to Run This Project
 
-### Links 🔗
+1. **Clone the repo:**
 
-- [Titanic dataset](https://raw.githubusercontent.com/pandas-dev/pandas/main/doc/data/titanic.csv)
-- Initial [Kaggle submission](https://www.kaggle.com/code/gracesampao/grace-sampao-exploratory-data-analysis-assignment)
-
-## 🛠️ My process
-
-### Built with 🧱
-
-### What I learned 🧠
-
-**1. Accessing a group of rows and columns using [`DataFrame.loc()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html#pandas.DataFrame.loc).**
-
-I wanted to access and view the empty values in different columns as a `DataFrame` to asses their relevance.
-
-```python
-titanic_dataset.loc[titanic_dataset['Embarked'].isna() == True]
-
+```bash
+git clone https://github.com/grace-sampao/Cyber-Shujaa---Exploratory-Data-Analysis.git
 ```
-
-**2. Replacing values in a column using [`DataFrame.replace()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.replace.html).**
-
-```python
-titanic_dataset['Survived'] = titanic_dataset['Survived'].replace({
-  0: 'No',
-  1: 'Yes'
-})
-
-```
-
-**3. Filling NA/NaN values using [`Series.fillna()`](https://pandas.pydata.org/docs/reference/api/pandas.Series.fillna.html).**
-
-Filled `NaN` values in the `['Cabin']` column to communicate cabin distribution more effectively.
-
-```python
-titanic_dataset['Cabin'].fillna(
-  value="Unassigned",
-  inplace=True
-)
-```
-
-**4. Changing the order of columns using [`DataFrame.reindex()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.reindex.html).**
-
-This was applicable for feature engineering a new column that would place age in to a particular age group.
-
-```python
-column_labels = [
-  'PassengerId',
-  'Survived',
-  'Pclass',
-  'Name',
-  'Sex',
-  'Age',
-  'Age Group',
-  'SibSp',
-  'Parch',
-  'Ticket',
-  'Fare',
-  'Cabin',
-  'Embarked'
-]
-
-titanic_dataset_age_groups = titanic_dataset_age_groups.reindex(columns=column_labels)
-```
-
-**5. Binning values into discrete intervals using [`pandas.cut()`](https://pandas.pydata.org/docs/reference/api/pandas.cut.html#pandas.cut).**
-
-Grouping the values in the `['Age']` column would contribute to a more clearer visualization of the age distribution among the passenger population.
-
-`pandas.cut()` is used to segment and sort data values into bins. It is also useful for going from a continuous variable to a categorical variable e.g. converting ages to groups of age ranges as was the case here.
-
-It supports binning into an equal number of bins, or a pre-specified array of bins.
-
-```python
-bins = [0, 12, 19, 34, 54, 64, 120]
-labels = [
-  'Child (0-12)',
-  'Teen (13-19)',
-  'Young Adult (20-34)',
-  'Middle-Aged (35-54)',
-  'Pre-Retiree (55-64)',
-  'Senior (65+)'
-]
-
-titanic_dataset_age_groups['Age Group'] = pd.cut(
-  titanic_dataset_age_groups['Age Group'],
-  bins=bins,
-  labels=labels
-)
-```
-
-### Continued development 🌱
-
-- Data Structures and Algorithms.
-
-### Useful resources 📚
 
 ## 👩🏽‍💻 Author
 
 | Platform | Link |
 | :--- | :--- |
-| **Portfolio Website** | [https://grace-sampao.github.io](https://grace-sampao.github.io) |
+| **Blog** | [https://grace-sampao.github.io](https://grace-sampao.github.io) |
 | **LinkedIn** | [Grace Sampao](https://www.linkedin.com/in/grace-sampao) |
 | **X** | [@grace_sampao](https://x.com/grace_sampao) |
 | **Email** | sampaograce@gmail.com |
